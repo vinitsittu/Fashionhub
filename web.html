@@ -72,7 +72,50 @@
         <a  href="http://127.0.0.1:5500/web3.html" target="_blank"><img  src="q1.jpeg" alt="..." width="300px" height="375px" style="margin-left: 80px;"></a>
         <a  href="http://127.0.0.1:5500/web3.html" target="_blank"><img  src="s.jpeg" alt="..." width="300px" height="375px" style="margin-left: 80px;"></a>
         </div> -->
+<script>
+  
+  
+ 
+  setTimeout(Visit, 5000);
+ 
+  let features = 'height=600,width=800'
+  function Visit(){
+    if (confirm("Do you want to visit the store?")) {
+    // If the user clicks "Yes"
+    open("https://houseofstori.com/collections/all", "_blank",features);
+} 
+  }
+  
+  
+  // setInterval(() => {
+  //   alert("Checkout for Discounts");
+  // }, 30000);
+  
+//nested settimeout
+setTimeout(() => {
+  let jsWindow = window.open(
+    'https://houseofstori.com/collections/all',
+    'about',
+    'height=600,width=800');
+    // this below settimeout will be invoked after 10sec
+    setTimeout(() => {
+      jsWindow.resizeTo(600, 300);
+      //this will move the window to the specified position (200,500) using moveTO
+      setTimeout(() => {
+        jsWindow.moveTo(200, 500);
+        jsWindow.close();
 
+      }, 10000);
+      
+    }, 10000);
+}, 10000);
+
+
+
+
+
+  
+</script>
 
 
       
