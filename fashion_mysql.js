@@ -4,14 +4,9 @@ const mysql = require('mysql2');
 const cors = require('cors');
 require('dotenv').config(); // Load environment variables
 
-const app = express();
-<<<<<<< HEAD
+const app = express();  
 const port = process.env.PORT || 9000;
 app.use(cors());
-=======
-const port = 9000;
-app.use(cors()); 
->>>>>>> 586ee9b9458c9d98144241f09ab2ec67c6d7aa60
 
 const db = mysql.createConnection({
   host: process.env.DB_HOST || '127.0.0.1',
