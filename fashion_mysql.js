@@ -5,8 +5,13 @@ const cors = require('cors');
 require('dotenv').config(); // Load environment variables
 
 const app = express();
+<<<<<<< HEAD
 const port = process.env.PORT || 9000;
 app.use(cors());
+=======
+const port = 9000;
+app.use(cors()); 
+>>>>>>> 586ee9b9458c9d98144241f09ab2ec67c6d7aa60
 
 const db = mysql.createConnection({
   host: process.env.DB_HOST || '127.0.0.1',
@@ -72,4 +77,26 @@ app.post('/login', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+const { exec } = require('child_process');
+const path = require('path');
+
+// Get the absolute path to the fas.html file
+const filePath = path.join(__dirname, 'fas.html');
+
+// Determine the command to open the file based on the OS
+const openCommand =
+  process.platform === 'win32' ? `start "" "${filePath}"` :
+  process.platform === 'darwin' ? `open "${filePath}"` :
+  `xdg-open "${filePath}"`;
+
+// Execute the command to open the file
+exec(openCommand, (error) => {
+  if (error) {
+    console.error('Error opening fas.html:', error);
+  } else {
+    console.log('fas.html opened in the default browser');
+  }
 });

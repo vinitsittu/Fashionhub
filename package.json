@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "fashion_mysql.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "node fashion_mysql.js",
+=======
+    "start": "fashion_mysql.js",
+>>>>>>> 586ee9b9458c9d98144241f09ab2ec67c6d7aa60
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,7 +16,10 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
+<<<<<<< HEAD
     "dotenv": "^16.4.5",
+=======
+>>>>>>> 586ee9b9458c9d98144241f09ab2ec67c6d7aa60
     "express": "^4.21.1",
     "mysql": "^2.18.1",
     "mysql2": "^3.6.5",
